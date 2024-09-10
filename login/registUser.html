@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regist</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="registUser.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <div class="logo">CHOGAdZIP</div>
+            <div class="header-links">
+                <a href="#">관심목록</a>
+                <a href="#">방내놓기</a>
+            </div>
+            <div class="header-buttons">
+                <a href="#">로그인</a>
+                <a href="#">회원가입</a>
+                <a href="#">중개사 가입/광고문의</a>
+            </div>
+        </header>
+        <br>
+
+        <div class="signup-container">
+            <h1>회원가입</h1>
+            <br>
+            <form class="signup-form">
+                <div class="input-group">
+        
+                    <input type="text" id="nickname" placeholder="닉네임">
+                </div>
+    
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="agree-all" onclick="checkAll(this)">
+                        <label for="agree-all">모두 동의합니다.</label>
+                    </div>
+    
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="agree-age" class="agree-checkbox">
+                        <label for="agree-age"><span class="required-text">[필수]</span> 만 14세 이상 가입동의</label>
+                    </div>
+    
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="agree-privacy" class="agree-checkbox">
+                        <label for="agree-privacy"><span class="required-text">[필수]</span> 개인정보처리방침과 이용약관에 동의합니다.</label>
+                    </div>
+                </div>
+    
+                <button type="submit" class="signup-button">회원가입 완료</button>
+            </form>
+        </div>
+
+        <br><br><br><br><br><br><br><br><br><br>
+
+        <footer>
+            KB IT's Your Life 6-3 화이팅
+        </footer>
+    </div>
+
+    <script>
+       
+        function checkAll(mainCheckbox) {
+            const checkboxes = document.querySelectorAll('.agree-checkbox');
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = mainCheckbox.checked;
+            });
+        }
+    </script>
+    
+</body>
+</html>

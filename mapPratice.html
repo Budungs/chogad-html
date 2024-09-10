@@ -1,11 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>다방 AI 추천 매물</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .title {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #0070c0;
+            margin-bottom: 20px;
+        }
+        .cards {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .card {
+            background-color: #f2f2f2;
+            padding: 20px;
+            text-align: center;
+            width: 18%;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            background-color: #d9d9d9;
+            border-radius: 10px;
+        }
+        .card-info {
+            margin-top: 10px;
+            text-align: left;
+        }
+        .card-info .label {
+            font-weight: bold;
+            color: #777;
+        }
+        .card-info .price {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        .card-info .desc {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+        .card-info .location {
+            font-size: 12px;
+            color: #888;
+            margin-top: 5px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="title">다방 AI가 딱 맞는 <span style="color: #0070c0;">서초동</span> 매물을 추천했어요 🤖</div>
+        <div class="subtitle">서초동 | 월세 무제한 | 전세 무제한 검색 조건으로 추천된 매물입니다.</div>
+        
+        <div class="cards">
+            <div class="card">
+                <img src="./img/kbkb.png" alt="매물 사진">
+                <div class="card-info">
+                    <div class="label">원룸</div>
+                    <div class="price">월세 2000/55</div>
+                    <div class="desc">2층, 5평, 관리비 10만<br>깔끔하고 공간 좋은 오픈형 원룸</div>
+                    <div class="location">서울특별시 강남구 역삼동</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img/kbkb.png" alt="매물 사진">
+                <div class="card-info">
+                    <div class="label">원룸</div>
+                    <div class="price">월세 2000/55</div>
+                    <div class="desc">2층, 5평, 관리비 10만<br>깔끔하고 공간 좋은 오픈형 원룸</div>
+                    <div class="location">서울특별시 강남구 역삼동</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img/kbkb.png" alt="매물 사진">
+                <div class="card-info">
+                    <div class="label">원룸</div>
+                    <div class="price">월세 2000/55</div>
+                    <div class="desc">2층, 5평, 관리비 10만<br>깔끔하고 공간 좋은 오픈형 원룸</div>
+                    <div class="location">서울특별시 강남구 역삼동</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img/kbkb.png" alt="매물 사진">
+                <div class="card-info">
+                    <div class="label">원룸</div>
+                    <div class="price">월세 2000/55</div>
+                    <div class="desc">2층, 5평, 관리비 10만<br>깔끔하고 공간 좋은 오픈형 원룸</div>
+                    <div class="location">서울특별시 강남구 역삼동</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img/kbkb.png" alt="매물 사진">
+                <div class="card-info">
+                    <div class="label">원룸</div>
+                    <div class="price">월세 2000/55</div>
+                    <div class="desc">2층, 5평, 관리비 10만<br>깔끔하고 공간 좋은 오픈형 원룸</div>
+                    <div class="location">서울특별시 강남구 역삼동</div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

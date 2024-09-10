@@ -23,7 +23,7 @@ header {
 .logo {
     font-size: 2rem;
     margin-right: 1rem;
-    color: #ff9100;
+    color: #7747B5;
     font-weight: bold;
 }
 
@@ -72,7 +72,7 @@ header {
     width: 100%;
     padding: 10px 20px 10px 45px;
     font-size: 1.2rem;
-    border: 2px solid #f7931e;
+    border: 2px solid #7747B5;
     border-radius: 10px;
 }
 
@@ -100,23 +100,23 @@ header {
 }
 
 .option {
-    padding: 20px;
+    padding: 50px;
     border: 1px solid #ccc;
     border-radius: 10px;
     background-color: #f9f9f9;
     text-align: left;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     display: flex;
     align-items: center;
 }
 
 .option img {
-    width: 50px;
+    width: 65px;
     margin-right: 15px;
 }
 
 .option strong {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     display: block;
     margin-bottom: 5px;
 }
@@ -128,6 +128,9 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .search-bar {
+        width: 70%;
+    }
     .header {
         flex-direction: column;
         align-items: flex-start;
@@ -166,7 +169,7 @@ footer {
 
 @media (max-width: 480px) {
     .search-bar {
-        width: 90%;
+        width: 70%;
     }
 
     .option {
@@ -177,4 +180,82 @@ footer {
     .option img {
         margin-bottom: 10px;
     }
+}
+
+.title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.subtitle {
+    text-align: center;
+    color: #7747B5;
+    margin-bottom: 20px;
+}
+.cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.card {
+    background-color: #f2f2f2;
+    padding: 5px;
+    text-align: center;
+    width: 18%;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.card-second {
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+.card img {
+    width: 100%;
+    height: auto;
+    background-color: #d9d9d9;
+    border-radius: 10px;
+}
+.card-info {
+    margin-top: 10px;
+    text-align: left;
+}
+.card-info .label {
+    font-weight: bold;
+    color: #777;
+}
+.card-info .price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+.card-info .desc {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+.card-info .location {
+    font-size: 12px;
+    color: #888;
+    margin-top: 5px;
+}
+
+.more-listings {
+    text-align: right;
+    margin-top: 20px;
+}
+.more-listings a {
+    text-decoration: none;
+    color: #7747B5;
+    font-weight: bold;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+}
+.more-listings a:hover {
+    text-decoration: underline;
+}
+.arrow {
+    margin-left: 5px;
+    font-size: 18px;
 }
