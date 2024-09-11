@@ -1,0 +1,137 @@
+.mp-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.mp-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.tab {
+    flex: 1;
+    padding: 15px 20px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+}
+
+.tab:not(.active) {
+    background-color: #f5f5f5;
+}
+
+.tab.active {
+    background-color: #6a1b9a;
+    color: white;
+}
+
+.tab:hover {
+    background-color: #ddd;
+}
+
+@media screen and (max-width: 768px) {
+    .tab {
+        flex: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+.profile-container {
+    max-width: 500px;
+    margin: 40px auto;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.profile-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.edit-icon {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.edit-icon label img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.profile-form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.input-with-arrow {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-with-arrow input {
+    border: none;
+    flex: 1;
+    padding: 10px;
+}
+
+.input-with-arrow span {
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-left: 1px solid #ccc;
+}
+
+.input-with-button {
+    display: flex;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: left;
+}
+

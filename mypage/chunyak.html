@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chungyak</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="chunyak.css">
+    <link rel="stylesheet" href="mypage.css">
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <div class="logo">CHOGAdZIP</div>
+            <div class="header-links">
+                <a href="#">관심목록</a>
+                <a href="#">방내놓기</a>
+            </div>
+            <div class="header-buttons">
+                <a href="#">로그인</a>
+                <a href="#">회원가입</a>
+                <a href="#">중개사 가입/광고문의</a>
+            </div>
+        </header>
+        <br>
+
+        <div class="cy-container">
+            <h1 class="mp-title">MY PAGE</h1>
+    
+            
+            <div class="tabs">
+                <div class="tab" onclick="setActiveTab(this)">내 정보</div>
+                <div class="tab active" onclick="setActiveTab(this)">관심 청약 목록</div>
+                <div class="tab" onclick="setActiveTab(this)">관심 매물 목록</div>
+                <div class="tab" onclick="setActiveTab(this)">작성 리뷰 목록</div>
+                <div class="tab" onclick="setActiveTab(this)">등록한 매물 목록</div>
+            </div>
+    
+            
+            <div class="table-container">
+                <div class="table-header">
+                    <span>전체 <strong>1020</strong>건 | 1/N 페이지</span>
+                    <select>
+                        <option value="10">10건</option>
+                        <option value="20">20건</option>
+                        <option value="30">30건</option>
+                    </select>
+                </div>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>V</th>
+                            <th>유형</th>
+                            <th>지역</th>
+                            <th>공고명</th>
+                            <th>청약 기간</th>
+                            <th>발표일</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><span class="type-label">분양주택</span></td>
+                            <td>경기도</td>
+                            <td>부천두산위브트레지움 1단지(부천약대) 공가 세대 일반매각 공고</td>
+                            <td>2024.09.09 <br> 2024.09.20</td>
+                            <td>2024.09.25</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><span class="type-label">분양주택</span></td>
+                            <td>경기도</td>
+                            <td>부천두산위브트레지움 1단지(부천약대) 공가 세대 일반매각 공고</td>
+                            <td>2024.09.09 <br> 2024.09.20</td>
+                            <td>2024.09.25</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+  
+    
+</body>
+<script>
+    function setActiveTab(element) {
+       
+        const tabs = document.querySelectorAll('.tab');
+        tabs.forEach(tab => tab.classList.remove('active'));
+
+        element.classList.add('active');
+    }
+</script>
+</html>
