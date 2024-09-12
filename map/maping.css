@@ -1,0 +1,66 @@
+.map-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+}
+.filter {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: #b0b0b0;
+    position: relative;
+}
+.filter.active {
+    color: #6c5ce7;
+    font-weight: bold;
+}
+.filter.active::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #6c5ce7;
+    bottom: -2px;
+    left: 0;
+}
+
+.conditions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.condition {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid #e0e0e0;
+    background-color: #f0e5ff;
+    color: #6c5ce7;
+    cursor: pointer;
+}
+.condition.active {
+    background-color: #6c5ce7;
+    color: white;
+}
+.condition.disabled {
+    background-color: #f7f7f7;
+    color: #d0d0d0;
+    border: none;
+    cursor: not-allowed;
+}
+
+#map {
+    width: 100%;
+    height: 600px;
+    border: 1px solid #ddd;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주소로 장소 표시하기</title>
+    
+</head>
+<body>
+<p style="margin-top:-12px">
+    여러 건물의 주소를 기반으로 지도에 마커를 표시하는 예시입니다.
+</p>
+<div id="map" style="width:100%;height:350px;"></div>
+
+<script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=9c2f06db1ad57f54c5e374f8f60e0ba5&libraries=services"></script>
+<script>
+// 지도 생성
+var mapContainer = document.getElementById('map'), 
+    mapOption = {
+        center: new kakao.maps.LatLng(37.497942, 127.027621), // 지도 중심을 서울로 설정
+        level: 5 // 확대 레벨
+    };  
+
+var map = new kakao.maps.Map(mapContainer, mapOption); 
+
+// 주소-좌표 변환 객체를 생성합니다
+var geocoder = new kakao.maps.services.Geocoder();
+
+// 백엔드에서 받은 데이터라 가정
+var buildingData = [
+    {"대지위치": "서울특별시 강남구 개포동 1194-1", "건물명": "런던빌 개포"},
+    {"대지위치": "서울특별시 강남구 개포동 1229-10", "건물명": "하우징허브럭스"},
+    {"대지위치": "서울특별시 강남구 개포동 1229-6", "건물명": "CCRU오피스텔"},
+    {"대지위치": "서울특별시 강남구 개포동 1236-4", "건물명": "디오빌"},
+    {"대지위치": "서울특별시 강남구 개포동 1237-3", "건물명": ""}
+];
+
+// 주소로 좌표를 검색하여 마커를 표시하는 함수
+function displayMarker(address, name) {
+    geocoder.addressSearch(address, function(result, status) {
+        // 정상적으로 검색이 완료됐으면
+        if (status === kakao.maps.services.Status.OK) {
+
+            var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+
+            // 결과값으로 받은 위치에 마커를 생성합니다
+            var marker = new kakao.maps.Marker({
+                map: map,
+                position: coords
+            });
+
+            // 마커에 인포윈도우를 생성해 건물명을 표시합니다
+            var infowindow = new kakao.maps.InfoWindow({
+                content: '<div style="width:150px;text-align:center;padding:6px 0;">' + name + '</div>'
+            });
+
+            // 마커에 마우스 오버 이벤트를 등록하여 인포윈도우를 열고 닫습니다
+            kakao.maps.event.addListener(marker, 'mouseover', function() {
+                infowindow.open(map, marker);
+            });
+
+            kakao.maps.event.addListener(marker, 'mouseout', function() {
+                infowindow.close();
+            });
+        }
+    });
+}
+
+// JSON 데이터를 바탕으로 각 주소에 마커를 표시합니다
+for (var i = 0; i < buildingData.length; i++) {
+    displayMarker(buildingData[i]["대지위치"], buildingData[i]["건물명"]);
+}
+
+</script>
+</body>
+</html>
