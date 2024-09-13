@@ -197,7 +197,7 @@ footer {
     justify-content: space-between;
     gap: 10px;
 }
-.card {
+.cardhyeonseok {
     background-color: #f2f2f2;
     padding: 5px;
     text-align: center;
@@ -258,4 +258,8 @@ footer {
 .arrow {
     margin-left: 5px;
     font-size: 18px;
+}
+
+.text-purple {
+    color: #6f42c1; /* 보라색 코드 */
 }
